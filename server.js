@@ -40,42 +40,29 @@ MongoClient.connect('mongodb://dannyjones360:test@ds123930.mlab.com:23930/halfti
     console.log('db connected');
 })
 
-// app.get('/dog', function(req, res) {
-//    res.json({ querystring_breed: req.query.breed });
-// });
-//
-//
-// http://localhost:8080/dog?breed='Whippet'
-
-
-// http://localhost:8080/dog?breed='Whippet&age=10'
-// And, you obtain it by simply adding another property in the response json object.
-//
-// app.get('/dog', function(req, res) {
-//    res.json({ querystring_breed: req.query.breed,
-//           age: req.query.age });
-// });
-
-
+//GET ARTICLE LIST
 app.get('/api/articles', (req, res) => {
-
     var indexLimit = req.query.indexLimit;
-    console.log(indexLimit);
+    //console.log(indexLimit);
     var articles = [];
     //console.log(articles);
-
-    db.collection('articles').find().toArray().then(result => {
-        articles = articles.concat(result);
-    }).then(() => {
-
-        res.send(articles);
-    }).catch(e => {
-        console.error(e);
-    });
+    db.collection('articles')
+        .find()
+        .sort(_id: 1)
+        .limit(indexLimit)
+        .toArray()
+        .then(result => {
+            articles = articles.concat(result);
+        }).then(() => {
+            res.send(articles);
+        }).catch(e => {
+            console.error(e);
+        });
 });
 
-app.get('*', middleware);
+//------------------------------------
 
+app.get('*', middleware);
 
 app.listen(3000, '0.0.0.0', (err) => {
     if (err) {
