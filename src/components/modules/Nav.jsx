@@ -1,0 +1,37 @@
+import React from "react";
+import {IndexLink, Link} from "react-router";
+
+
+import {
+	Container,
+	Row,
+	Col,
+	Visible,
+	Hidden,
+	ScreenClassRender
+} from 'react-grid-system';
+
+export default class Nav extends React.Component {
+	constructor() {
+		super()
+		this.state = {};
+	}
+
+	render() {
+
+		return (
+			<Row>
+				<Col sm={12}>
+					<ul>
+						<li>
+							<IndexLink to="/">Home</IndexLink>
+						</li>
+						<li>
+							<Link to="Articles">Articles</Link>
+						</li>
+					</ul>
+				</Col>
+			</Row>
+		);
+	}
+}
