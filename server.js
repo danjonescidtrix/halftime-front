@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'development') {
 //---------------------------------------------------------------------------------
 
 //GET ARTICLES
-app.get('/api/articles', (req, res) => {
+app.get('/api/articleList', (req, res) => {
 
     var indexLimit = parseInt(req.query.indexLimit, 10);
     var articleId = req.query.articleId
