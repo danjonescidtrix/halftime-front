@@ -31,16 +31,7 @@ if (process.env.NODE_ENV === 'development') {
 
 //---------------------------------------------------------------------------------
 
-//connect to mongo db
-var db
-const MongoClient = require('mongodb').MongoClient
-MongoClient.connect('mongodb://dannyjones360:test@ds123930.mlab.com:23930/halftimefront', (err, database) => {
-    if (err) return console.log(err);
-    db = database
-    console.log('db connected');
-})
-
-//GET ARTICLE LIST
+//GET ARTICLES
 app.get('/api/articles', (req, res) => {
 
     var indexLimit = parseInt(req.query.indexLimit, 10);
@@ -65,10 +56,19 @@ app.get('/api/articles', (req, res) => {
 
 app.get('*', middleware);
 
-app.listen(3000, '0.0.0.0', (err) => {
-    if (err) {
-        console.error(err);
-    } else {
-        console.info('Listening at http://localhost:3000');
-    }
-});
+
+//connect to mongo db
+var db
+const MongoClient = require('mongodb').MongoClient
+MongoClient.connect('mongodb://dannyjones360:test@ds123930.mlab.com:23930/halftimefront', (err, database) => {
+    if (err) return console.log(err);
+    db = database
+    console.log('db connected');
+    app.listen(3000, '0.0.0.0', (err) => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.info('Listening at http://localhost:3000');
+        }
+    });
+})

@@ -10,6 +10,6 @@ export default(
     <Route path="/" component={Layout}>
         <IndexRoute component={Home}></IndexRoute>
         <Route path="/articles" name="Articles" component={Articles}></Route>
-        <Route path="/articles/:id" name="Article" component={Article}></Route>
+        <Route path="/article/:id" name="Article" component={Article}></Route>
     </Route>
 );

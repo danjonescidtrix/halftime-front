@@ -1,8 +1,6 @@
 import React from "react";
 import {IndexLink, Link} from "react-router";
 var classNames = require('classnames');
-
-//Import React Grid System
 import {
     Container,
     Row,
@@ -31,9 +29,9 @@ class ListItemStandard extends React.Component {
     render() {
         return (
             <li>
-                <Link to={'/articles/' + this.props.tweet.title}>{this.props.tweet.title}</Link>
-                <br></br>
-                <a>{this.props.tweet.dateAdded}</a>
+                <Link to={'/article/' + this.props.tweet.title}>{this.props.tweet.title}</Link>
+                <p>{this.props.tweet.subTitle}</p>
+                <p>{this.props.tweet.dateAdded}</p>
             </li>
         );
     }
