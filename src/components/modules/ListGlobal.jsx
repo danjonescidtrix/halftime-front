@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux"
-import {fetchArticleList} from "../../actions/articleListActions"
+import {fetchTweets} from "../../actions/tweetsActions"
 import ListStandard from './Lists/ListStandard.jsx';
 import ListFeatured from './Lists/ListFeatured.jsx';
 import {
@@ -13,7 +13,7 @@ import {
 } from 'react-grid-system';
 
 @connect((store) => {
-    return {articleList: store.articleList.articleList, fetching: store.articleList.fetching};
+    return {tweets: store.tweets.tweets, fetching: store.tweets.fetching};
 })
 
 class ListGlobal extends React.Component {
@@ -27,7 +27,7 @@ class ListGlobal extends React.Component {
 
     // BEFORE COMPONENT RENDER (For Ajax / Dispatcher Events): get article Title / Thumbnail rows based on this.props.indexLimit
     componentWillMount = () => {
-        this.props.dispatch(fetchArticleList(this.props.indexLimit))
+        this.props.dispatch(fetchTweets(this.props.indexLimit))
     }
 
     // ON COMPONENT RENDER

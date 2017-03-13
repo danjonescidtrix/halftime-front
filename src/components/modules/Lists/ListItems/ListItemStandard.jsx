@@ -29,9 +29,9 @@ class ListItemStandard extends React.Component {
     render() {
         return (
             <li>
-                <Link to={'/article/' + this.props.article.title}>{this.props.article.title}</Link>
-                <p>{this.props.article.subTitle}</p>
-                <p>{this.props.article.dateAdded}</p>
+                <Link to={'/article/' + this.props.tweet.title}>{this.props.tweet.title}</Link>
+                <p>{this.props.tweet.subTitle}</p>
+                <p>{this.props.tweet.dateAdded}</p>
             </li>
         );
     }

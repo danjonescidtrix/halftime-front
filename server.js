@@ -31,12 +31,12 @@ if (process.env.NODE_ENV === 'development') {
 
 //---------------------------------------------------------------------------------
 
-//GET ARTICLELISTS
-app.get('/api/articleList', (req, res) => {
+//GET ARTICLES
+app.get('/api/articles', (req, res) => {
 
     var indexLimit = parseInt(req.query.indexLimit, 10);
     var articleId = req.query.articleId
-    var articleList = [];
+    var articles = [];
 
     db.collection('articles')
         .find()
@@ -44,9 +44,9 @@ app.get('/api/articleList', (req, res) => {
         .limit(indexLimit)
         .toArray()
         .then(result => {
-            articleList = articleList.concat(result);
+            articles = articles.concat(result);
         }).then(() => {
-            res.send(articleList);
+            res.send(articles);
         }).catch(e => {
             console.error(e);
         });

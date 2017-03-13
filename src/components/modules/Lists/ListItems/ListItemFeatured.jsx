@@ -24,14 +24,14 @@ class ListItemFeatured extends React.Component {
     // ON COMPONENT RENDER
     componentDidMount = () => {
         console.log("Rendered - " + this.constructor.name);
-        console.log(this.props.articleList);
+        console.log(this.props.tweets);
     }
     // ====>>
 
     render() {
         return (
             <li>
-                <Link to={'/article/' + this.props.article.id}>{this.props.article.title}</Link>
+                <Link to={'/article/' + this.props.tweet.id}>{this.props.tweet.title}</Link>
             </li>
         );
     }

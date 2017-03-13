@@ -5,14 +5,14 @@ var classNames = require('classnames');
 import GlobalHero from '../modules/GlobalHero.jsx';
 import ListGlobal from '../modules/ListGlobal.jsx';
 
-export default class ArticleList extends React.Component {
+export default class Articles extends React.Component {
 
 	// BEFORE COMPONENT RENDER (For Everyhing else)
 	constructor() {
 		super();
 		//sets initial state
 		this.state = {
-			page: "ArticleList"
+			page: "Articles"
 		};
 	}
 

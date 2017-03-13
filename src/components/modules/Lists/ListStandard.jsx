@@ -34,7 +34,7 @@ class ListStandard extends React.Component {
 			<Row>
 				<Col sm={12}>
 					<ul>
-						{this.props.articleList.map((article, i) => <ListItemStandard key={i} article={article}/>)}
+						{this.props.tweets.map((tweet, i) => <ListItemStandard key={i} tweet={tweet}/>)}
 					</ul>
 				</Col>
 			</Row>

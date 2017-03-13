@@ -1,25 +1,25 @@
 import axios from "axios";
 //var resourceUrl = "http://localhost:7777/api/schools";
 
-export function fetchArticleList(indexLimit) {
+export function fetchTweets(indexLimit) {
     return function(dispatch) {
         dispatch({
-            type: "FETCH_ARTICLELIS"
+            type: "FETCH_TWEETS"
         })
-        axios.get('/api/articleList', {
+        axios.get('/api/articles', {
                 params: {
                     indexLimit: indexLimit
                 }
             })
             .then((response) => {
                 dispatch({
-                    type: "FETCH_ARTICLELIST_FULFILLED",
+                    type: "FETCH_TWEETS_FULFILLED",
                     payload: response.data
                 })
             })
             .catch((err) => {
                 dispatch({
-                    type: "FETCH_ARTICLELIST_REJECTED",
+                    type: "FETCH_TWEETS_REJECTED",
                     payload: err
                 })
             })
