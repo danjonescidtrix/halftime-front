@@ -1,19 +1,17 @@
 export default function reducer(state = {
-	tweets: [],
+	articleList: [],
 	fetching: false,
 	fetched: false,
 	error: null,
 }, action) {
 
 	switch (action.type) {
-		case "FETCH_TWEETS":
 			{
 				return {
 					...state,
 					fetching: true
 				}
 			}
-		case "FETCH_TWEETS_REJECTED":
 			{
 				return {
 					...state,
@@ -21,13 +19,12 @@ export default function reducer(state = {
 					error: action.payload
 				}
 			}
-		case "FETCH_TWEETS_FULFILLED":
 			{
 				return {
 					...state,
 					fetching: false,
 					fetched: true,
-					tweets: action.payload,
+					articleList: action.payload,
 				}
 			}
 	}

@@ -25,7 +25,7 @@ class ListFeatured extends React.Component {
 	// ON COMPONENT RENDER
 	componentDidMount = () => {
 		console.log("Rendered - " + this.constructor.name);
-console.log(this.props.tweets);
+console.log(this.props.articleList);
 		//console.log(this.props);
 	}
 	// ====>>
@@ -35,7 +35,7 @@ console.log(this.props.tweets);
 			<Row>
 				<Col sm={12}>
 					<ul>
-						{this.props.tweets.map((tweet, i) => <ListItemFeatured key={i} tweet={tweet}/>)}
+						{this.props.articleList.map((article, i) => <ListItemFeatured key={i} article={article}/>)}
 					</ul>
 				</Col>
 			</Row>

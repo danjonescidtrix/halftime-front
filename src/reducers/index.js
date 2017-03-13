@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import tweets from "./tweetsReducer"
+import articleList from "./articleListReducer"
 
 export default combineReducers({
-    tweets,
+    articleList,
     routing: routerReducer
 });
