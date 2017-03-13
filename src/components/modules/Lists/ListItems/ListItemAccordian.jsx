@@ -32,7 +32,7 @@ class ListItemAccordian extends React.Component {
 	render() {
 		return (
 			<li>
-				<Link to={'/articles/' + this.props.tweet.id}>{this.props.tweet.text}</Link>
+				<Link to={'/articles/' + this.props.tweet.id}>{this.props.tweet.title}</Link>
 			</li>
 		);
 	}

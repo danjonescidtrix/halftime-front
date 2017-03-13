@@ -25,6 +25,7 @@ class ListFeatured extends React.Component {
 	// ON COMPONENT RENDER
 	componentDidMount = () => {
 		console.log("Rendered - " + this.constructor.name);
+console.log(this.props.tweets);
 		//console.log(this.props);
 	}
 	// ====>>

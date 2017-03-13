@@ -42,13 +42,14 @@ MongoClient.connect('mongodb://dannyjones360:test@ds123930.mlab.com:23930/halfti
 
 //GET ARTICLE LIST
 app.get('/api/articles', (req, res) => {
-    var indexLimit = req.query.indexLimit;
-    //console.log(indexLimit);
+
+    var indexLimit = parseInt(req.query.indexLimit, 10);
+    var articleId = req.query.articleId
     var articles = [];
-    //console.log(articles);
+
     db.collection('articles')
         .find()
-        .sort(_id: 1)
+        .sort("dateAdded", -1)
         .limit(indexLimit)
         .toArray()
         .then(result => {

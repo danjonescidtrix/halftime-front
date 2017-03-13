@@ -2,7 +2,6 @@ import React from "react";
 import {connect} from "react-redux"
 
 
-
 import {fetchTweets} from "../../actions/tweetsActions"
 
 import ListStandard from './Lists/ListStandard.jsx';
