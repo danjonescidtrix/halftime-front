@@ -1,5 +1,3 @@
-# universal-boilerplate
-
 ### Install
 ```sh
 git clone https://github.com/justinjung04/universal-boilerplate.git
@@ -26,6 +24,3 @@ npm run serve
 ```sh
 git checkout v1.0.0
 ```
-
-### Article
-About details of this boilerplate, please refer to: [React: Server-side Rendering and Hot Reloading](https://medium.com/@justinjung04/react-server-side-rendering-and-hot-reloading-ffb87ca81a89)
