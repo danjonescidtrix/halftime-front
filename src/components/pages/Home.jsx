@@ -18,8 +18,8 @@ export default class Home extends React.Component {
 
 	// ON COMPONENT RENDER
 	componentDidMount = () => {
-		console.log("Rendered - " + this.constructor.name);
-		console.log("----------------------------");
+		//console.log("Rendered - " + this.constructor.name);
+		//console.log("----------------------------");
 		//console.log(this.props.data);
 	}
 	// =========>>

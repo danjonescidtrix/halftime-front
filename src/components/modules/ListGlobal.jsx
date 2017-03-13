@@ -32,7 +32,7 @@ class ListGlobal extends React.Component {
 
     // ON COMPONENT RENDER
     componentDidMount = () => {
-        console.log("Rendered - " + this.constructor.name);
+        //console.log("Rendered - " + this.constructor.name);
         //console.log(this.props);
     }
     // ====>>

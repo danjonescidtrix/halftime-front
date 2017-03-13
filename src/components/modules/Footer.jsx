@@ -1,7 +1,5 @@
 import React from "react";
 var classNames = require('classnames');
-
-
 import {
 	Container,
 	Row,

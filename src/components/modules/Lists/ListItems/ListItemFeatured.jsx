@@ -1,8 +1,6 @@
 import React from "react";
 import {IndexLink, Link} from "react-router";
 var classNames = require('classnames');
-
-//Import React Grid System
 import {
     Container,
     Row,
@@ -23,15 +21,15 @@ class ListItemFeatured extends React.Component {
 
     // ON COMPONENT RENDER
     componentDidMount = () => {
-        console.log("Rendered - " + this.constructor.name);
-        console.log(this.props.articleList);
+        //console.log("Rendered - " + this.constructor.name);
+        //console.log(this.props);
     }
     // ====>>
 
     render() {
         return (
             <li>
-                <Link to={'/article/' + this.props.article.id}>{this.props.article.title}</Link>
+                <Link to={'/article/' + this.props.article.title}>{this.props.article.title}</Link>
             </li>
         );
     }

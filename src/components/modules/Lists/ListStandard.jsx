@@ -1,9 +1,6 @@
 import React from "react";
 var classNames = require('classnames');
-
 import ListItemStandard from './ListItems/ListItemStandard.jsx';
-
-//Import React Grid System
 import {
 	Container,
 	Row,
@@ -24,7 +21,7 @@ class ListStandard extends React.Component {
 
 	// ON COMPONENT RENDER
 	componentDidMount = () => {
-		console.log("Rendered - " + this.constructor.name);
+		//console.log("Rendered - " + this.constructor.name);
 		//console.log(this.props);
 	}
 	// ====>>

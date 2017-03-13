@@ -17,8 +17,8 @@ export default class Article extends React.Component {
 
 	// ON COMPONENT RENDER
 	componentDidMount = () => {
-		console.log("Rendered - " + this.constructor.name);
-		console.log("----------------------------");
+		//console.log("Rendered - " + this.constructor.name);
+		//console.log("----------------------------");
 		//onsole.log(this.props.data);
 	}
 	// =========>>

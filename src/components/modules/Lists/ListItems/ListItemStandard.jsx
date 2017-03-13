@@ -21,8 +21,8 @@ class ListItemStandard extends React.Component {
 
     // ON COMPONENT RENDER
     componentDidMount = () => {
-        console.log("Rendered - " + this.constructor.name);
-        console.log(this.props);
+        //console.log("Rendered - " + this.constructor.name);
+        //console.log(this.props);
     }
     // ====>>
 

@@ -1,9 +1,6 @@
 import React from "react";
 var classNames = require('classnames');
-
 import ListItemFeatured from './ListItems/ListItemFeatured.jsx';
-
-//Import React Grid System
 import {
 	Container,
 	Row,
@@ -15,7 +12,6 @@ import {
 
 class ListFeatured extends React.Component {
 
-	// BEFORE COMPONENT RENDER (For Everyhing else)
 	constructor() {
 		super();
 		//sets initial state
@@ -24,8 +20,8 @@ class ListFeatured extends React.Component {
 
 	// ON COMPONENT RENDER
 	componentDidMount = () => {
-		console.log("Rendered - " + this.constructor.name);
-console.log(this.props.articleList);
+		//console.log("Rendered - " + this.constructor.name);
+		//console.log(this.props.articleList);
 		//console.log(this.props);
 	}
 	// ====>>
