@@ -52,6 +52,11 @@ app.get('/api/articleList', (req, res) => {
         });
 });
 
+//GET ARTICLE
+app.get('/api/article', (req, res) => {
+    console.log(req.query.title);
+});
+
 //------------------------------------
 
 app.get('*', middleware);
