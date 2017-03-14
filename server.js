@@ -3,6 +3,7 @@ import express from 'express';
 import webpack from 'webpack';
 import middleware from './src/middleware';
 
+
 const app = express();
 
 //---------------------------------------------------------------------------------
@@ -54,7 +55,23 @@ app.get('/api/articleList', (req, res) => {
 
 //GET ARTICLE
 app.get('/api/article', (req, res) => {
-    console.log(req.query.id);
+
+    var ObjectId = require('mongodb').ObjectID;
+    var ObjectID = require('mongodb').ObjectID;
+    var articles;
+
+    db.collection('articles')
+        .findOne({
+            "_id": ObjectId("58c2a5bdf36d281631b3714a")
+        })
+        .then(result => {
+            articles = result;
+        }).then(() => {
+            res.send(articles);
+        }).catch(e => {
+            console.error(e);
+        });
+
 });
 
 //------------------------------------

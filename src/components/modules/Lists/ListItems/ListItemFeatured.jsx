@@ -29,7 +29,7 @@ class ListItemFeatured extends React.Component {
     render() {
         return (
             <li>
-                <Link to={'/article/' + this.props.article.title}>{this.props.article.title}</Link>
+                <Link to={'/article/' + this.props.article._id}>{this.props.article.title}</Link>
             </li>
         );
     }

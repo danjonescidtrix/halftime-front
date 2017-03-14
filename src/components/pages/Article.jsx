@@ -10,40 +10,47 @@ import GlobalHero from '../modules/GlobalHero.jsx';
 
 export default class Article extends React.Component {
 
-	// BEFORE COMPONENT RENDER (For Everyhing else)
-	constructor() {
-		super();
-		//sets initial state
-		this.state = {
-			page: "Article"
-		};
-	}
+    // BEFORE COMPONENT RENDER (For Everyhing else)
+    constructor() {
+        super();
+        //sets initial state
+        this.state = {
+            page: "Article"
+        };
+    }
 
-	// BEFORE COMPONENT RENDER (For Ajax / Dispatcher Events): get article Title / Thumbnail rows based on this.props.indexLimit
-	componentWillMount = () => {
-		console.log(this.props)
-			this.props.dispatch(fetchArticle(this.props.params.id))
-	}
+    // BEFORE COMPONENT RENDER (For Ajax / Dispatcher Events): get article Title / Thumbnail rows based on this.props.indexLimit
+    componentWillMount = () => {
+        console.log(this.props)
+        this.props.dispatch(fetchArticle(this.props.params.id))
+    }
 
-	// ON COMPONENT RENDER
-	componentDidMount = () => {
-		//console.log("Rendered - " + this.constructor.name);
-		//console.log("----------------------------");
-		//onsole.log(this.props.data);
-	}
-	// =========>>
+    // ON COMPONENT RENDER
+    componentDidMount = () => {
+        //console.log("Rendered - " + this.constructor.name);
+        //console.log("----------------------------");
+        //onsole.log(this.props.data);
+    }
+    // =========>>
 
-	// CONTROLS THE STATE
-	handleClass = (param) => {
-		console.log(param);
-	}
-	// ====>>
+    // CONTROLS THE STATE
+    handleClass = (param) => {
+        console.log(param);
+    }
+    // ====>>
 
-	render() {
-		return (
-			<div>
-		<GlobalHero page={this.state.page} {...this.props.data}/>
-		<h2>test</h2>
-	</div>);
-	}
+    render() {
+
+        if (this.props.fetching) {
+            return (
+                <p>Loading...</p>
+            );
+        } else {
+            return (
+                <div>
+                    <h1>{this.props.article.title}</h1>
+                </div>
+            );
+        }
+    }
 }
