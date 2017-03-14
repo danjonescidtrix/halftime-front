@@ -26,18 +26,7 @@ export default class Article extends React.Component {
     }
 
     // ON COMPONENT RENDER
-    componentDidMount = () => {
-        //console.log("Rendered - " + this.constructor.name);
-        //console.log("----------------------------");
-        //onsole.log(this.props.data);
-    }
-    // =========>>
-
-    // CONTROLS THE STATE
-    handleClass = (param) => {
-        console.log(param);
-    }
-    // ====>>
+    componentDidMount = () => {}
 
     render() {
 
@@ -49,6 +38,7 @@ export default class Article extends React.Component {
             return (
                 <div>
                     <h1>{this.props.article.title}</h1>
+                    <h2>{this.props.article.subTitle}</h2>
                 </div>
             );
         }
