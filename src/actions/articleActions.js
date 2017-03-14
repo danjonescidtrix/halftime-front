@@ -1,14 +1,15 @@
 import axios from "axios";
 //var resourceUrl = "http://localhost:7777/api/schools";
 
-export function fetchArticle(title) {
+export function fetchArticle(id) {
+
     return function(dispatch) {
         dispatch({
             type: "FETCH_ARTICLE"
         })
         axios.get('/api/article', {
                 params: {
-                    title: title
+                    id: id
                 }
             })
             .then((response) => {

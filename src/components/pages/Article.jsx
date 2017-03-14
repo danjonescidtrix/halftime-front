@@ -21,7 +21,8 @@ export default class Article extends React.Component {
 
 	// BEFORE COMPONENT RENDER (For Ajax / Dispatcher Events): get article Title / Thumbnail rows based on this.props.indexLimit
 	componentWillMount = () => {
-			this.props.dispatch(fetchArticle(this.props.params.title))
+		console.log(this.props)
+			this.props.dispatch(fetchArticle(this.props.params.id))
 	}
 
 	// ON COMPONENT RENDER
@@ -39,6 +40,10 @@ export default class Article extends React.Component {
 	// ====>>
 
 	render() {
-		return (<GlobalHero page={this.state.page} {...this.props.data}/>);
+		return (
+			<div>
+		<GlobalHero page={this.state.page} {...this.props.data}/>
+		<h2>test</h2>
+	</div>);
 	}
 }
