@@ -57,12 +57,12 @@ app.get('/api/articleList', (req, res) => {
 app.get('/api/article', (req, res) => {
 
     var ObjectId = require('mongodb').ObjectID;
-    var ObjectID = require('mongodb').ObjectID;
+    var articleId = req.query.id
     var articles;
 
     db.collection('articles')
         .findOne({
-            "_id": ObjectId("58c2a5bdf36d281631b3714a")
+            "_id": ObjectId(articleId)
         })
         .then(result => {
             articles = result;

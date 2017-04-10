@@ -35,10 +35,41 @@ export default class Article extends React.Component {
                 <p>Loading...</p>
             );
         } else {
+
+            let title = null;
+            if (typeof this.props.article.body != 'undefined') {
+                title = this.props.article.title;
+            }
+            let subTitle = null;
+            if (typeof this.props.article.body != 'undefined') {
+                subTitle = this.props.article.subTitle;
+            }
+            let section1 = null;
+            if (typeof this.props.article.body != 'undefined') {
+                if (this.props.article.body.section1.include) {
+                    section1 = this.props.article.body.section1.text;
+                }
+            }
+            let section2 = null;
+            if (typeof this.props.article.body != 'undefined') {
+                if (this.props.article.body.section2.include) {
+                    section2 = this.props.article.body.section2.text;
+                }
+            }
+            let section3 = null;
+            if (typeof this.props.article.body != 'undefined') {
+                if (this.props.article.body.section3.include) {
+                    section3 = this.props.article.body.section3.text;
+                }
+            }
+
             return (
                 <div>
-                    <h1>{this.props.article.title}</h1>
-                    <h2>{this.props.article.subTitle}</h2>
+                    <h1>{title}</h1>
+                    <h2>{subTitle}</h2>
+                    <p>{section1}</p>
+                    <p>{section2}</p>
+                    <p>{section3}</p>
                 </div>
             );
         }
