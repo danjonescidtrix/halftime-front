@@ -9,6 +9,7 @@ import {
     Hidden,
     ScreenClassRender
 } from 'react-grid-system';
+if(process.env.WEBPACK) require('./index.scss');
 
 class ListItemStandard extends React.Component {
 
@@ -30,7 +31,7 @@ class ListItemStandard extends React.Component {
         return (
             <li>
                 <Link to={'/article/' + this.props.article._id}>{this.props.article.title}</Link>
-                <p>{this.props.article.subTitle}</p>
+                <h1>{this.props.article.subTitle}</h1>
                 <p>{this.props.article.dateAdded}</p>
                 <p>{this.props.article._id}</p>
             </li>

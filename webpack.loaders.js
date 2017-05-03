@@ -1,5 +1,18 @@
 module.exports = [
 	{
+		test: /\.js$/,
+		loader: 'babel',
+		include: path.resolve(__dirname, 'src'),
+		query: {
+			presets: [ 'react-hmre' ]
+		}
+	},
+	{
+		test: /\.scss/,
+		loader: 'style!css!sass!postcss',
+		include: path.resolve(__dirname, 'src')
+	},
+	{
 	    test: /\.jsx?$/,         // Match both .js and .jsx files
 	    exclude: /node_modules/,
 	    loader: "babel",

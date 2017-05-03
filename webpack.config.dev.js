@@ -1,38 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-var loaders = require('./webpack.loaders');
-
-
-// global css
-loaders.push({
-	test: /\.css$/,
-	exclude: /[\/\\]src[\/\\]/,
-	loaders: [
-		'style?sourceMap',
-		'css'
-	]
-});
-// local scss modules
-loaders.push({
-	test: /\.scss$/,
-	exclude: /[\/\\](node_modules|bower_components|public\/)[\/\\]/,
-	loaders: [
-		'style?sourceMap',
-		'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]&sourceMap',
-		'postcss',
-		'sass'
-	]
-});
-// local css modules
-loaders.push({
-	test: /\.css$/,
-	exclude: /[\/\\](node_modules|bower_components|public\/)[\/\\]/,
-	loaders: [
-		'style?sourceMap',
-		'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]&sourceMap'
-	]
-});
 
 module.exports = {
 	entry: [
@@ -55,7 +23,65 @@ module.exports = {
 		})
 	],
 	module: {
-		loaders
+		loaders: [
+			{
+				test: /\.js$/,
+				loader: 'babel',
+				include: path.resolve(__dirname, 'src'),
+				query: {
+					presets: [ 'react-hmre' ]
+				}
+			},
+			{
+				test: /\.scss/,
+				loader: 'style!css!sass!postcss',
+				include: path.resolve(__dirname, 'src')
+			},
+			{
+			    test: /\.jsx?$/,         // Match both .js and .jsx files
+			    exclude: /node_modules/,
+			    loader: "babel",
+			    query:
+			      {
+			        presets:['react']
+			      }
+			},
+			{
+				test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+				exclude: /(node_modules|bower_components)/,
+				loader: "file"
+			},
+			{
+				test: /\.(woff|woff2)$/,
+				exclude: /(node_modules|bower_components)/,
+				loader: "url?prefix=font/&limit=5000"
+			},
+			{
+				test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+				exclude: /(node_modules|bower_components)/,
+				loader: "url?limit=10000&mimetype=application/octet-stream"
+			},
+			{
+				test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+				exclude: /(node_modules|bower_components)/,
+				loader: "url?limit=10000&mimetype=image/svg+xml"
+			},
+			{
+				test: /\.gif/,
+				exclude: /(node_modules|bower_components)/,
+				loader: "url-loader?limit=10000&mimetype=image/gif"
+			},
+			{
+				test: /\.jpg/,
+				exclude: /(node_modules|bower_components)/,
+				loader: "url-loader?limit=10000&mimetype=image/jpg"
+			},
+			{
+				test: /\.png/,
+				exclude: /(node_modules|bower_components)/,
+				loader: "url-loader?limit=10000&mimetype=image/png"
+			}
+		]
 	},
     postcss: function() {
         return [autoprefixer];
