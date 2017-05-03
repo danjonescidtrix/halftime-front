@@ -1,6 +1,7 @@
 import React from "react";
 var classNames = require('classnames');
 import ListItemFeatured from './ListItems/ListItemFeatured.jsx';
+if(process.env.WEBPACK) require('./List.scss');
 import {
 	Container,
 	Row,
@@ -30,9 +31,9 @@ class ListFeatured extends React.Component {
 		return (
 			<Row>
 				<Col sm={12}>
-					<ul>
+					<div className="List List--FeaturedSquare">
 						{this.props.articleList.map((article, i) => <ListItemFeatured key={i} article={article}/>)}
-					</ul>
+					</div>
 				</Col>
 			</Row>
 		);

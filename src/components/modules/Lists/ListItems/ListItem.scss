@@ -1,0 +1,50 @@
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		//transform: translate3d(0, -20%, 0);
+	}
+
+	to {
+		opacity: 1;
+		//transform: translate3d(0, 0, 0);
+	}
+}
+
+.fadeInSeq {
+	opacity: 0;
+	animation: fadeIn 0.5s ease-in both;
+
+	&:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+
+	&:nth-child(3) {
+		animation-delay: 0.4s;
+	}
+
+	&:nth-child(4) {
+		animation-delay: 0.4s;
+	}
+
+	&:nth-child(5) {
+		animation-delay: 0.4s;
+	}
+
+	&:nth-child(6) {
+		animation-delay: 0.4s;
+	}
+}
+
+.ListItem {
+	&--FeaturedSquare {
+		p {
+			color: green;
+		}
+	}
+
+	&--BrowseList {
+		p {
+			color: red;
+		}
+	}
+}

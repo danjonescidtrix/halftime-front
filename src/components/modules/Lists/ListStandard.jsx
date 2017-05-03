@@ -30,9 +30,9 @@ class ListStandard extends React.Component {
 		return (
 			<Row>
 				<Col sm={12}>
-					<ul>
+					<div>
 						{this.props.articleList.map((article, i) => <ListItemStandard key={i} article={article}/>)}
-					</ul>
+					</div>
 				</Col>
 			</Row>
 		);

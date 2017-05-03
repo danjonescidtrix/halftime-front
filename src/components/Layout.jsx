@@ -3,6 +3,7 @@ import {Link} from "react-router";
 
 import Footer from "./modules/Footer.jsx";
 import Nav from "./modules/Nav.jsx";
+if(process.env.WEBPACK) require('../sass/helpers/reset.scss');
 
 //Import React Grid System
 import {

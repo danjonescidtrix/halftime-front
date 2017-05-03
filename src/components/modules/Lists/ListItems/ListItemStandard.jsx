@@ -1,6 +1,7 @@
 import React from "react";
 import {IndexLink, Link} from "react-router";
 var classNames = require('classnames');
+if(process.env.WEBPACK) require('./ListItem.scss');
 import {
     Container,
     Row,
@@ -9,7 +10,6 @@ import {
     Hidden,
     ScreenClassRender
 } from 'react-grid-system';
-if(process.env.WEBPACK) require('./index.scss');
 
 class ListItemStandard extends React.Component {
 
@@ -29,12 +29,12 @@ class ListItemStandard extends React.Component {
 
     render() {
         return (
-            <li>
+            <div className="ListItem ListItem--BrowseList">
                 <Link to={'/article/' + this.props.article._id}>{this.props.article.title}</Link>
-                <h1>{this.props.article.subTitle}</h1>
+                <p>{this.props.article.subTitle}</p>
                 <p>{this.props.article.dateAdded}</p>
                 <p>{this.props.article._id}</p>
-            </li>
+            </div>
         );
     }
 }

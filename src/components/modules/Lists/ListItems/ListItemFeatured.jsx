@@ -1,6 +1,7 @@
 import React from "react";
 import {IndexLink, Link} from "react-router";
 var classNames = require('classnames');
+if(process.env.WEBPACK) require('./ListItem.scss');
 import {
     Container,
     Row,
@@ -28,9 +29,10 @@ class ListItemFeatured extends React.Component {
 
     render() {
         return (
-            <li>
+            <div className="ListItem ListItem--FeaturedSquare fadeInSeq">
                 <Link to={'/article/' + this.props.article._id}>{this.props.article.title}</Link>
-            </li>
+                <p>{this.props.article.subTitle}</p>
+            </div>
         );
     }
 }
