@@ -30,7 +30,7 @@ class ListItem_FeaturedSquare extends React.Component {
 
   render() {
     return (
-      <Col xs={6} sm={3} md={2} className="fadeInSeq">
+      <Col xs={6} sm={4} className="fadeInSeq">
         <div className="ListItem ListItem--FeaturedSquare">
           <Link to={'/article/' + this.props.article._id}>
             <p>{this.props.article.title}</p>
