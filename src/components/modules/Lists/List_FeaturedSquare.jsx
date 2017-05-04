@@ -1,6 +1,6 @@
 import React from "react";
 var classNames = require('classnames');
-import ListItemFeatured from './ListItems/ListItemFeatured.jsx';
+import ListItem_FeaturedSquare from './ListItems/ListItem_FeaturedSquare.jsx';
 if (process.env.WEBPACK)
   require('./List.scss');
 import {
@@ -12,7 +12,7 @@ import {
   ScreenClassRender
 } from 'react-grid-system';
 
-class ListFeatured extends React.Component {
+class List_FeaturedSquare extends React.Component {
 
   constructor() {
     super();
@@ -34,7 +34,7 @@ class ListFeatured extends React.Component {
         <Col sm={12}>
           <Row>
             <div className="List List--FeaturedSquare">
-              {this.props.articleList.map((article, i) => <ListItemFeatured key={i} article={article}/>)}
+              {this.props.articleList.map((article, i) => <ListItem_FeaturedSquare key={i} article={article}/>)}
             </div>
           </Row>
         </Col>
@@ -43,4 +43,4 @@ class ListFeatured extends React.Component {
   }
 }
 
-export default ListFeatured;
+export default List_FeaturedSquare;

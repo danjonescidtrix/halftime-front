@@ -34,7 +34,7 @@ export default class Home extends React.Component {
 		return (
 			<div>
 				<GlobalHero page={this.state.page} {...this.props.data}/>
-				<ListGlobal numbers={this.state.numbers} listType={"listFeatured"} indexLimit={6}/>
+				<ListGlobal numbers={this.state.numbers} listType={"List_FeaturedSquare"} indexLimit={6}/>
 			</div>
 		);
 	}

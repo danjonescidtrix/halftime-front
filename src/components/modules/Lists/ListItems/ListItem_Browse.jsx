@@ -11,7 +11,7 @@ import {
     ScreenClassRender
 } from 'react-grid-system';
 
-class ListItemStandard extends React.Component {
+class ListItem_Browse extends React.Component {
 
     // BEFORE COMPONENT RENDER (For Everyhing else)
     constructor() {
@@ -39,4 +39,4 @@ class ListItemStandard extends React.Component {
     }
 }
 
-export default ListItemStandard;
+export default ListItem_Browse;

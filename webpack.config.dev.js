@@ -14,7 +14,7 @@ module.exports = {
 		publicPath: '/'
 	},
 	plugins: [
-		new DashboardPlugin({ port: 3000 }),
+		//new DashboardPlugin({ port: 3000 }),
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),
 		new webpack.DefinePlugin({

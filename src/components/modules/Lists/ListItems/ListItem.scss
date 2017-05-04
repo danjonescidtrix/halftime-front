@@ -37,12 +37,20 @@
 
 .ListItem {
 	&--FeaturedSquare {
+		transition: transform 0.5s ease-in-out;
+
 		p {
 			color: green;
+			background: #E06C75;
+			padding: 10px;
+		}
+
+		&:hover {
+			   transform: translate3d(0px, -10px, 0px);
 		}
 	}
 
-	&--BrowseList {
+	&--Browse {
 		p {
 			color: red;
 		}

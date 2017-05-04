@@ -1,6 +1,6 @@
 import React from "react";
 var classNames = require('classnames');
-import ListItemStandard from './ListItems/ListItemStandard.jsx';
+import ListItem_Browse from './ListItems/ListItem_Browse.jsx';
 import {
 	Container,
 	Row,
@@ -10,7 +10,7 @@ import {
 	ScreenClassRender
 } from 'react-grid-system';
 
-class ListStandard extends React.Component {
+class List_Browse extends React.Component {
 
 	// BEFORE COMPONENT RENDER (For Everyhing else)
 	constructor() {
@@ -31,7 +31,7 @@ class ListStandard extends React.Component {
 			<Row>
 				<Col sm={12}>
 					<div>
-						{this.props.articleList.map((article, i) => <ListItemStandard key={i} article={article}/>)}
+						{this.props.articleList.map((article, i) => <ListItem_Browse key={i} article={article}/>)}
 					</div>
 				</Col>
 			</Row>
@@ -39,4 +39,4 @@ class ListStandard extends React.Component {
 	}
 }
 
-export default ListStandard;
+export default List_Browse;

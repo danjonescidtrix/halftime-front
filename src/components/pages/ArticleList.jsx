@@ -33,7 +33,7 @@ export default class ArticleList extends React.Component {
 	render() {
 		return (
 			<div>
-				<ListGlobal {...this.props.data} listType={"listStandard"} indexLimit={50}/>
+				<ListGlobal {...this.props.data} listType={"List_Browse"} indexLimit={50}/>
 			</div>
 		);
 	}

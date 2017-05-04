@@ -12,7 +12,7 @@ import {
   ScreenClassRender
 } from 'react-grid-system';
 
-class ListItemFeatured extends React.Component {
+class ListItem_FeaturedSquare extends React.Component {
 
   // BEFORE COMPONENT RENDER (For Everyhing else)
   constructor() {
@@ -30,14 +30,16 @@ class ListItemFeatured extends React.Component {
 
   render() {
     return (
-        <Col xs={6} sm={3} md={2} className="fadeInSeq">
-          <div className="ListItem ListItem--FeaturedSquare">
-            <Link to={'/article/' + this.props.article._id}>{this.props.article.title}</Link>
+      <Col xs={6} sm={3} md={2} className="fadeInSeq">
+        <div className="ListItem ListItem--FeaturedSquare">
+          <Link to={'/article/' + this.props.article._id}>
+            <p>{this.props.article.title}</p>
             <p>{this.props.article.subTitle}</p>
-          </div>
-        </Col>
+          </Link>
+        </div>
+      </Col>
     );
   }
 }
 
-export default ListItemFeatured;
+export default ListItem_FeaturedSquare;
