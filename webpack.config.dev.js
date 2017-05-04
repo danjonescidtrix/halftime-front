@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
+var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
 	entry: [
@@ -13,6 +14,7 @@ module.exports = {
 		publicPath: '/'
 	},
 	plugins: [
+		new DashboardPlugin({ port: 3000 }),
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),
 		new webpack.DefinePlugin({

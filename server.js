@@ -2,6 +2,7 @@ import path from 'path';
 import express from 'express';
 import webpack from 'webpack';
 import middleware from './src/middleware';
+var DashboardPlugin = require('webpack-dashboard/plugin');
 
 
 const app = express();
@@ -11,6 +12,7 @@ const app = express();
 if (process.env.NODE_ENV === 'development') {
     const config = require('./webpack.config.dev');
     const compiler = webpack(config);
+    compiler.apply(new DashboardPlugin());
     app.use(require('webpack-dev-middleware')(compiler, {
         noInfo: true,
         publicPath: config.output.publicPath,
