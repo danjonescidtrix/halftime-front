@@ -40,7 +40,16 @@ class ListItem_FeaturedSquare extends React.Component {
           <div className="ListItem ListItem--FeaturedSquare">
             <div className="featuredImg" style={divStyle}></div>
             <div className="shape shape--bottomLeft">
-              <p className="title">{this.props.article.title}</p>
+              <p className=""></p>
+              <div className="title title--readMore">
+                <span className="title title--readMore">
+                  {this.props.article.title}
+                </span>
+                <span>
+                  Read more...
+                </span>
+              </div>
+
             </div>
             <div className="shape shape--bottomRight">
               <p className="subTitle">{this.props.article.subTitle}</p>
