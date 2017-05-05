@@ -29,14 +29,24 @@ class ListItem_FeaturedSquare extends React.Component {
   // ====>>
 
   render() {
+    var imgUrl = "../../../../assets/signs_ep.jpg";
+    var divStyle = {
+      backgroundImage: 'url(' + imgUrl + ')'
+    }
+
     return (
-      <Col xs={6} sm={4} className="fadeInSeq">
-        <div className="ListItem ListItem--FeaturedSquare">
-          <Link to={'/article/' + this.props.article._id}>
-            <p>{this.props.article.title}</p>
-            <p>{this.props.article.subTitle}</p>
-          </Link>
-        </div>
+      <Col sm={6} md={4} className="fadeInSeq">
+        <Link to={'/article/' + this.props.article._id}>
+          <div className="ListItem ListItem--FeaturedSquare">
+            <div className="featuredImg" style={divStyle}></div>
+            <div className="shape shape--bottomLeft">
+              <p className="title">{this.props.article.title}</p>
+            </div>
+            <div className="shape shape--bottomRight">
+              <p className="subTitle">{this.props.article.subTitle}</p>
+            </div>
+          </div>
+        </Link>
       </Col>
     );
   }
