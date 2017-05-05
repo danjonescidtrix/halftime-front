@@ -1,7 +1,5 @@
 ### Install
 ```sh
-git clone https://github.com/justinjung04/universal-boilerplate.git
-cd universal-boilerplate
 npm install
 ```
 
