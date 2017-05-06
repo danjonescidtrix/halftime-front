@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-var DashboardPlugin = require('webpack-dashboard/plugin');
+//var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
 	entry: [
