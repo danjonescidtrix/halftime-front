@@ -6,6 +6,8 @@ import {match, RouterContext} from 'react-router';
 import reducers from './reducers';
 import routes from './routes';
 import store from './store';
+import Helmet from 'react-helmet';
+        let head = Helmet.rewind();
 
 export default(req, res) => {
     match({
@@ -21,9 +23,12 @@ export default(req, res) => {
                 res.status(200).send(`
 					<!doctype html>
 					<html>
-						<head>
-							<title>My Universal App</title>
-						</head>
+            <head>
+      <meta charset="utf-8" />
+      <title>${head.title}</title>
+      ${head.meta}
+      ${head.link}
+  </head>
 						<body>
 							<div id='app'></div>
 							<script src='/bundle.js'></script>

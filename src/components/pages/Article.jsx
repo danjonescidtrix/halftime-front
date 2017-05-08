@@ -3,6 +3,7 @@ import {connect} from "react-redux"
 import {fetchArticle} from "../../actions/articleActions"
 var classNames = require('classnames');
 import GlobalHero from '../modules/GlobalHero.jsx';
+import Helmet from 'react-helmet';
 
 @connect((store) => {
     return {article: store.article.article, fetching: store.article.fetching};
@@ -65,6 +66,11 @@ export default class Article extends React.Component {
 
             return (
                 <div>
+                  <Helmet>
+                <meta charSet="utf-8" />
+                <title>My Title</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
                     <h1>{title}</h1>
                     <h2>{subTitle}</h2>
                     <p>{section1}</p>

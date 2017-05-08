@@ -2,6 +2,7 @@ import path from 'path';
 import express from 'express';
 import webpack from 'webpack';
 import middleware from './src/middleware';
+import Helmet from 'react-helmet';
 var DashboardPlugin = require('webpack-dashboard/plugin');
 
 
