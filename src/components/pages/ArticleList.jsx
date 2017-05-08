@@ -36,9 +36,7 @@ export default class ArticleList extends React.Component {
 		return (
 			<div>
 				<Helmet>
-						<meta charSet="utf-8" />
-						<title>Browse</title>
-						<link rel="canonical" href="http://mysite.com/example" />
+						<title>Browse | Halftime Front</title>
 				</Helmet>
 				<ListGlobal {...this.props.data} listType={"List_Browse"} indexLimit={50}/>
 			</div>

@@ -1,5 +1,6 @@
 import React from "react";
 var classNames = require('classnames');
+import Helmet from 'react-helmet';
 
 
 import GlobalHero from '../modules/GlobalHero.jsx';
@@ -33,6 +34,9 @@ export default class Home extends React.Component {
 	render() {
 		return (
 			<div>
+				<Helmet>
+					<title>Home | Halftime Front</title>
+				</Helmet>
 				<GlobalHero page={this.state.page} {...this.props.data}/>
 				<ListGlobal numbers={this.state.numbers} listType={"List_FeaturedSquare"} indexLimit={6}/>
 			</div>
