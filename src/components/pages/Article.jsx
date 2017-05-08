@@ -68,7 +68,7 @@ export default class Article extends React.Component {
                 <div>
                   <Helmet>
                 <meta charSet="utf-8" />
-                <title>My Title</title>
+                <title>Article X</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
                     <h1>{title}</h1>

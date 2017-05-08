@@ -1,5 +1,7 @@
 import React from "react";
 var classNames = require('classnames');
+import Helmet from 'react-helmet';
+
 
 
 import GlobalHero from '../modules/GlobalHero.jsx';
@@ -33,6 +35,11 @@ export default class ArticleList extends React.Component {
 	render() {
 		return (
 			<div>
+				<Helmet>
+						<meta charSet="utf-8" />
+						<title>Browse</title>
+						<link rel="canonical" href="http://mysite.com/example" />
+				</Helmet>
 				<ListGlobal {...this.props.data} listType={"List_Browse"} indexLimit={50}/>
 			</div>
 		);
