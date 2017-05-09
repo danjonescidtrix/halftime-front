@@ -19,33 +19,21 @@ class ArticleHero extends React.Component {
   constructor() {
     super();
     //sets initial state
-    this.state = {
-      fadeIn: true
-    };
+    this.state = {};
   }
 
   render() {
-
-    // REMOVES CLASS IN REALTIME BASED ON STATE'S VALUE
-    var GLobalHeroClass = classNames({
-      //[s["fadeIn"]]: this.state.fadeIn === true
-    });
+    var imgUrl = "../../../assets/signs_ep.jpg";
+    var divStyle = {
+      backgroundImage: 'url(' + imgUrl + ')'
+    }
 
     return (
       <Row>
         <Col xs={12}>
-          <div className="demo__info">
-            Pure CSS parallax scroll demo #2 by Keith Clark. Please read the
-            <a href="http://keithclark.co.uk/articles/pure-css-parallax-websites/">blog post</a>
-            for more information.
-          </div>
-          <div className="parallax">
-            <div className="parallax__layer parallax__layer--back">
-              <div className="title">This is the background</div>
-            </div>
-            <div className="parallax__layer parallax__layer--base">
-              <div className="title">This is the foreground</div>
-            </div>
+          <div>
+            <div className="ArticleHero--img" style={divStyle}></div>
+            <p>hello</p>
           </div>
         </Col>
       </Row>

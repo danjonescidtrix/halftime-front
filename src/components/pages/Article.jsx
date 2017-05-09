@@ -70,7 +70,7 @@ export default class Article extends React.Component {
           <Helmet>
             <title>{title + " | Halftime Front"}</title>
           </Helmet>
-          	<ArticleHero />
+          <ArticleHero/>
           <h1>{title}</h1>
           <h2>{subTitle}</h2>
           <p>{section1}</p>
