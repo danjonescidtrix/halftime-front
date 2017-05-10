@@ -35,7 +35,7 @@ class ListItem_FeaturedSquare extends React.Component {
     }
 
     return (
-      <Col sm={6} md={4} className="fadeInSeq">
+      <Col sm={6} md={4} className="ListItem--cont">
         <Link to={'/article/' + this.props.article._id}>
           <div className="ListItem ListItem--FeaturedSquare">
             <div className="featuredImg" style={divStyle}></div>

@@ -14,14 +14,5 @@
 }
 
 .scrollUp--Container {
-  animation: scrollUp 1.8s ease both;
-}
-@keyframes scrollUp {
-  from {
-    transform: translate3d(0, 10%, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
+  animation: slideUp 1.5s ease both;
 }

@@ -33,7 +33,6 @@ class ArticleHero extends React.Component {
         <Col xs={12}>
           <div>
             <div className="ArticleHero--img" style={divStyle}></div>
-            <p>hello</p>
           </div>
         </Col>
       </Row>
