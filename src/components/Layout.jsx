@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router";
-
+import EasyTransition from 'react-easy-transition'
 import Footer from "./modules/Footer.jsx";
 import Nav from "./modules/Nav.jsx";
 if (process.env.WEBPACK)
@@ -84,7 +84,13 @@ export default class Layout extends React.Component {
         <Container fluid={true}>
           <Row>
             <Col sm={12}>
-              {childrenWithProps}
+              <EasyTransition path={location} initialStyle={{
+                opacity: 0
+              }} transition="opacity 0.2s ease-in" finalStyle={{
+                opacity: 1
+              }}>
+                {childrenWithProps}
+              </EasyTransition>
             </Col>
           </Row>
           <Footer/>
