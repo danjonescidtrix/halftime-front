@@ -3,6 +3,8 @@ import {connect} from "react-redux"
 import {fetchArticle} from "../../actions/articleActions"
 var classNames = require('classnames');
 import Helmet from 'react-helmet';
+if (process.env.WEBPACK)
+  require('./Article.scss');
 
 import ArticleHero from '../modules/Heros/ArticleHero.jsx';
 
@@ -11,6 +13,7 @@ import ArticleHero from '../modules/Heros/ArticleHero.jsx';
 })
 
 export default class Article extends React.Component {
+
 
   // BEFORE COMPONENT RENDER (For Everyhing else)
   constructor() {
@@ -31,6 +34,9 @@ export default class Article extends React.Component {
   componentDidMount = () => {}
 
   render() {
+
+
+
 
     if (this.props.fetching) {
       return (
@@ -61,11 +67,11 @@ export default class Article extends React.Component {
             <title>{title + " | Halftime Front"}</title>
           </Helmet>
           <ArticleHero/>
-          <h1>{title}</h1>
-          <h2>{subTitle}</h2>
-          <p>{section1}</p>
-          <p>{section2}</p>
-          <p>{section3}</p>
+          <h1 className="textCenter article__title">{title}</h1>
+          <h2 className="textCenter article__subTitle">{subTitle}</h2>
+          <p className="textCenter article__section1">{section1}</p>
+          <p className="textCenter article__section2">{section2}</p>
+          <p className="textCenter article__section3">{section3}</p>
         </div>
       );
     }

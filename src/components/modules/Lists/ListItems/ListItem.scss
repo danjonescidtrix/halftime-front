@@ -47,11 +47,11 @@
 				background-size: cover;
 				background-repeat: no-repeat;
 				background-position: 50% 50%;
-				-webkit-transition: background-position 1s ease;
-				-moz-transition: background-position 1s ease;
-				-ms-transition: background-position 1s ease;
-				-o-transition: background-position 1s ease;
-				transition: background-position 1s ease;
+				// -webkit-transition: background-position 1s ease;
+				// -moz-transition: background-position 1s ease;
+				// -ms-transition: background-position 1s ease;
+				// -o-transition: background-position 1s ease;
+				// transition: background-position 1s ease;
 			}
 
 			.title {
@@ -121,13 +121,13 @@
 
 			&:hover {
 				.shape--bottomLeft {
-					transform: translate3d(0px, -5px, 0px);
+					transform: translate3d(0px, -8px, 0px);
 				}
 			}
 
 			&:hover {
 				.featuredImg {
-					background-position: 50% 60%;
+					//background-position: 50% 60%;
 				}
 			}
 		}
