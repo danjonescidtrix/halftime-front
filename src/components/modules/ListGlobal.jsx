@@ -41,7 +41,8 @@ class ListGlobal extends React.Component {
 
     if (this.props.fetching) {
       return (
-        <p>Loading...</p>
+        // <p>Loading...</p>
+        null
       );
     } else {
       switch (this.props.listType) {

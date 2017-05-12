@@ -1,5 +1,7 @@
 import React from "react";
 var classNames = require('classnames');
+if (process.env.WEBPACK)
+  require('./Footer.scss');
 import {
 	Container,
 	Row,

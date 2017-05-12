@@ -34,36 +34,26 @@ export default class Article extends React.Component {
 
     if (this.props.fetching) {
       return (
-        <p>Loading...</p>
+        //<p>Loading...</p>
+        null
       );
     } else {
 
-      let title = null;
-      if (typeof this.props.article.body != 'undefined') {
-        title = this.props.article.title;
-      }
-      let subTitle = null;
-      if (typeof this.props.article.body != 'undefined') {
-        subTitle = this.props.article.subTitle;
-      }
-      let section1 = null;
-      if (typeof this.props.article.body != 'undefined') {
-        if (this.props.article.body.section1.include) {
-          section1 = this.props.article.body.section1.text;
-        }
-      }
-      let section2 = null;
-      if (typeof this.props.article.body != 'undefined') {
-        if (this.props.article.body.section2.include) {
-          section2 = this.props.article.body.section2.text;
-        }
-      }
-      let section3 = null;
-      if (typeof this.props.article.body != 'undefined') {
-        if (this.props.article.body.section3.include) {
-          section3 = this.props.article.body.section3.text;
-        }
-      }
+      let title = typeof this.props.article.title != 'undefined'
+        ? this.props.article.title
+        : null;
+      let subTitle = typeof this.props.article.subTitle != 'undefined'
+        ? this.props.article.subTitle
+        : null;
+      let section1 = typeof this.props.article.body != 'undefined'
+        ? this.props.article.body.section1.text
+        : null;
+      let section2 = typeof this.props.article.body != 'undefined'
+        ? this.props.article.body.section2.text
+        : null;
+      let section3 = typeof this.props.article.body != 'undefined'
+        ? this.props.article.body.section3.text
+        : null;
 
       return (
         <div>

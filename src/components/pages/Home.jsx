@@ -37,7 +37,6 @@ export default class Home extends React.Component {
 				<Helmet>
 					<title>Home | Halftime Front</title>
 				</Helmet>
-				<GlobalHero page={this.state.page} {...this.props.data}/>
 				<ListGlobal numbers={this.state.numbers} listType={"List_FeaturedSquare"} indexLimit={6}/>
 			</div>
 		);
