@@ -1,5 +1,53 @@
-.textCenter {
+// -------- Text Start --------
+.g-text-center {
   text-align: center;
   margin: 0 auto;
   display: block;
 }
+
+.g-text-width{
+  width: 90%;
+  max-width: 800px;
+}
+
+.g-title {
+  &--small {
+    font-size: 20px;
+  }
+
+  &--medium {
+    font-size: 24px;
+  }
+
+  &--large {
+    font-size: 28px;
+  }
+}
+// ---- Text End --------
+// -------- Spacers Start --------
+.g-margin {
+  &__top--small {
+    margin-top: 10px;
+  }
+
+  &__top--medium {
+    margin-top: 20px;
+  }
+
+  &__top--large {
+    margin-top: 30px;
+  }
+
+  &__bottom--small {
+    margin-bottom: 10px;
+  }
+
+  &__bottom--medium {
+    margin-bottom: 20px;
+  }
+
+  &__bottom--large {
+    margin-bottom: 30px;
+  }
+}
+// ---- Spacers End --------

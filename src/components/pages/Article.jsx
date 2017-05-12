@@ -14,7 +14,6 @@ import ArticleHero from '../modules/Heros/ArticleHero.jsx';
 
 export default class Article extends React.Component {
 
-
   // BEFORE COMPONENT RENDER (For Everyhing else)
   constructor() {
     super();
@@ -35,14 +34,10 @@ export default class Article extends React.Component {
 
   render() {
 
-
-
-
     if (this.props.fetching) {
       return (
-        //<p>Loading...</p>
-        null
-      );
+      //<p>Loading...</p>
+      null);
     } else {
 
       let title = typeof this.props.article.title != 'undefined'
@@ -67,11 +62,11 @@ export default class Article extends React.Component {
             <title>{title + " | Halftime Front"}</title>
           </Helmet>
           <ArticleHero/>
-          <h1 className="textCenter article__title">{title}</h1>
-          <h2 className="textCenter article__subTitle">{subTitle}</h2>
-          <p className="textCenter article__section1">{section1}</p>
-          <p className="textCenter article__section2">{section2}</p>
-          <p className="textCenter article__section3">{section3}</p>
+          <h1 className="g-margin__top--large g-text-center g-text-width g-title g-title--large">{title}</h1>
+          <h2 className="g-margin__top--small g-text-center g-text-width article__subTitle">{subTitle}</h2>
+          <p className="g-margin__top--large g-text-center g-text-width article__section1">{section1}</p>
+          <p className="g-margin__top--large g-text-center g-text-width article__section2">{section2}</p>
+          <p className="g-margin__top--large g-text-center g-text-width article__section3">{section3}</p>
         </div>
       );
     }
