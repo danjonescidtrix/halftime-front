@@ -1,11 +1,12 @@
 // -------- Text Start --------
+
 .g-text-center {
   text-align: center;
   margin: 0 auto;
   display: block;
 }
 
-.g-text-width{
+.g-text-width {
   width: 90%;
   max-width: 800px;
 }
@@ -25,6 +26,25 @@
 }
 // ---- Text End --------
 // -------- Spacers Start --------
+
+.g-padding {
+  &--none {
+    padding: 0 !important;
+  }
+
+  &--small {
+    padding: 10px !important;
+  }
+
+  &--medium {
+    padding: 20px !important;
+  }
+
+  &--large {
+    padding: 30px !important;
+  }
+}
+
 .g-margin {
   &__top--small {
     margin-top: 10px;

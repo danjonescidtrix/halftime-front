@@ -83,7 +83,7 @@ export default class Layout extends React.Component {
         <Nav location={location}/>
         <Container fluid={true}>
           <Row>
-            <Col sm={12}>
+            <Col sm={12} class="g-padding-none">
               <EasyTransition path={location} initialStyle={{
                 opacity: 0
               }} transition="opacity 0.2s ease-in" finalStyle={{
