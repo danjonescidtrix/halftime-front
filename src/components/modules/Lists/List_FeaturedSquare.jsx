@@ -31,7 +31,7 @@ class List_FeaturedSquare extends React.Component {
   render() {
     return (
       <Row>
-        <Col sm={12} className="scrollUp--Container">
+        <Col sm={12} className="scrollUp--Container g-padding-none">
           <Row>
             <div className="List List--FeaturedSquare">
               {this.props.articleList.map((article, i) => <ListItem_FeaturedSquare key={i} article={article}/>)}

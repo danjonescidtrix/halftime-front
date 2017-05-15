@@ -30,7 +30,7 @@ class ArticleHero extends React.Component {
 
     return (
       <Row>
-        <Col xs={12}>
+        <Col xs={12} className="g-padding--none">
           <div>
             <div className="ArticleHero--img" style={divStyle}></div>
           </div>

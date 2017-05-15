@@ -1,7 +1,6 @@
 .ArticleHero--img {
   height: 60vw;
-  max-height: 400px;
-  max-width: 800px;
+  max-height: 500px;
   width: 100%;
   margin: 0 auto;
   background-size: cover;
@@ -9,5 +8,4 @@
   background-position: 50% 50%;
   opacity: 0; //animation: fadeIn 1s ease both, slideUp 1.5s ease both;
   animation: fadeIn 1s ease both;
-  border-radius: 5px;
 }

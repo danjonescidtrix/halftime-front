@@ -29,7 +29,7 @@ export default class Footer extends React.Component {
 
 		return (
 				<Row>
-					<Col sm={12}>
+					<Col sm={12} className="g-padding--none">
 						<footer>
 							<p>Find this on GithUb</p>
 						</footer>

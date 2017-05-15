@@ -62,11 +62,13 @@ export default class Article extends React.Component {
             <title>{title + " | Halftime Front"}</title>
           </Helmet>
           <ArticleHero/>
+          <div className="article__block g-padding--small">
           <h1 className="g-margin__top--large g-text-center g-text-width g-title g-title--large">{title}</h1>
           <h2 className="g-margin__top--small g-text-center g-text-width article__subTitle">{subTitle}</h2>
           <p className="g-margin__top--large g-text-center g-text-width article__section1">{section1}</p>
           <p className="g-margin__top--large g-text-center g-text-width article__section2">{section2}</p>
-          <p className="g-margin__top--large g-text-center g-text-width article__section3">{section3}</p>
+          <p className="g-margin__top--large g-margin__bottom--large  g-text-center g-text-width article__section3">{section3}</p>
+          </div>
         </div>
       );
     }

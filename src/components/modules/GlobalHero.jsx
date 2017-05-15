@@ -49,7 +49,7 @@ class GlobalHero extends React.Component {
 
 		return (
 			<Row>
-				<Col sm={6}>
+				<Col sm={6} className="g-padding--none">
 					<div className={GLobalHeroClass}>
 						<h1 onClick={() => this.handleClass("titleSelected")}>{this.props.page}!</h1>
 						<p onClick={() => this.handleClass("subTitleSelected")}>{this.props.name}, {this.props.age}, {this.props.city}</p>

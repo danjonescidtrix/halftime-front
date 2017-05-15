@@ -29,7 +29,7 @@ class List_Browse extends React.Component {
 	render() {
 		return (
 			<Row>
-				<Col sm={12}>
+				<Col sm={12} className="g-padding--none">
 					<div>
 						{this.props.articleList.map((article, i) => <ListItem_Browse key={i} article={article}/>)}
 					</div>

@@ -1,15 +1,25 @@
-.article__title {}
+.article__block {
+  background: #ffffff;
+  position: relative;
+  top: -8vw;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
 
-.article__subTitle {}
+  .article__title {}
 
-.article__section1 {
-  font-size: 18px;
-}
+  .article__subTitle {}
 
-.article__section2 {
-  font-size: 18px;
-}
+  .article__section1 {
+    font-size: 18px;
+  }
 
-.article__section3 {
-  font-size: 18px;
+  .article__section2 {
+    font-size: 18px;
+  }
+
+  .article__section3 {
+    font-size: 18px;
+  }
 }
