@@ -59,13 +59,13 @@ app.get('/api/articleList', (req, res) => {
 //GET ARTICLE
 app.get('/api/article', (req, res) => {
 
-    var ObjectId = require('mongodb').ObjectID;
+    //var ObjectId = require('mongodb').ObjectID;
     var articleId = req.query.id
     var articles;
 
     db.collection('articles')
         .findOne({
-            "_id": ObjectId(articleId)
+            "_id": articleId
         })
         .then(result => {
             articles = result;

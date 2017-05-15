@@ -25,7 +25,7 @@ export default class Nav extends React.Component {
           <IndexLink to="/">Home</IndexLink>
         </li>
         <li>
-          <Link to="ArticleList">ArticleList</Link>
+          <Link to="/ArticleList">ArticleList</Link>
         </li>
       </ul>
     );
